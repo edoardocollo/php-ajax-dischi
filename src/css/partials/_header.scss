@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 60px;
+  .header_wrap{
+    width: 80vw;
+    img {
+      height: 50px;
+    }
+  }
+}
