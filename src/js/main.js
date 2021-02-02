@@ -16,6 +16,8 @@ let app = new Vue({
         });
     },
   },
+
+  
   mounted(){
     this.getData();
   },
