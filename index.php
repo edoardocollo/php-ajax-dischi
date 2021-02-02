@@ -35,8 +35,19 @@
           <?php } ?>
         </div>
       </div>
-    </div>
 
+
+
+
+      <div id="app">
+
+      </div>
+
+
+
+
+
+    </div>
 
 
     <script src="dist/js/main.js" charset="utf-8"></script>

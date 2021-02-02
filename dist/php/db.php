@@ -1,6 +1,8 @@
 <?php
-$response = json_decode(file_get_contents('https://flynn.boolean.careers/exercises/api/array/music'), true );
+$serverResponse = file_get_contents('https://flynn.boolean.careers/exercises/api/array/music');
+$response = json_decode($serverResponse, true );
 $db = $response['response'];
+
 
 
 
