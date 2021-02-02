@@ -13,25 +13,27 @@
     <link rel="stylesheet" href="dist/css/style.css">
   </head>
   <body>
-    <header>
-      <div class="header_wrap">
+    <div id="main_container">
+      <header>
+        <div class="header_wrap">
 
-        <img src="dist/img/logo.png" alt="">
-      </div>
-    </header>
+          <img src="dist/img/logo.png" alt="">
+        </div>
+      </header>
 
-    <div id="main_wrap">
-      <div class="row">
+      <div id="main_wrap">
+        <div class="row">
 
-        <?php foreach ($dischiDb as $card) { ?>
-          <div class="card">
-            <img src="<?php echo $card['poster']; ?>" alt="">
-            <h2><?php echo $card['title'];?></h2>
-            <h3><?php echo $card['author'];?></h3>
-            <h4><?php echo $card['genre'];?></h4>
-            <h4><?php echo $card['year'];?></h4>
-          </div>
-        <?php } ?>
+          <?php foreach ($db as $card) { ?>
+            <div class="card">
+              <img src="<?php echo $card['poster']; ?>" alt="">
+              <h2><?php echo $card['title'];?></h2>
+              <h3><?php echo $card['author'];?></h3>
+              <h4><?php echo $card['genre'];?></h4>
+              <h4><?php echo $card['year'];?></h4>
+            </div>
+          <?php } ?>
+        </div>
       </div>
     </div>
 
