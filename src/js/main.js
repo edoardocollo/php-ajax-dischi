@@ -3,8 +3,9 @@ const axios = require('axios');
 let app = new Vue({
   el:'#app',
   data:{
-    text:'ciao',
+    genreList:['Tutti',],
     contentDB:'',
+    selectedGenre:'Tutti',
   },
   methods: {
     getData: function(){
@@ -12,14 +13,24 @@ let app = new Vue({
         .then(resp =>{
           this.contentDB = resp.data;
           // console.log(this.contentDB);
+          this.contentDB.forEach((item, i) => {
+            if (!this.genreList.includes(item.genre)) {
+              this.genreList.push(item.genre);
+            }
+          });
 
         })
         .catch(error => {
           console.log(error)
         });
     },
-  },
+    selectGenre: function(event){
+      const value = event.target.value;
 
+      // this.selectedGenre = genre;
+      this.selectedGenre = value;
+    },
+  },
 
   mounted(){
     this.getData();
