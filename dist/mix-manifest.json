@@ -1,4 +1,5 @@
 {
     "/js/main.js": "/js/main.js",
+    "/gsap/gsap.js": "/gsap/gsap.js",
     "/css/style.css": "/css/style.css"
 }
