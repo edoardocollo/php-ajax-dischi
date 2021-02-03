@@ -4,12 +4,15 @@ let app = new Vue({
   el:'#app',
   data:{
     text:'ciao',
+    contentDB:'',
   },
   methods: {
     getData: function(){
       axios.get('dist/php/dbVue.php')
         .then(resp =>{
-          console.log(resp.data);
+          this.contentDB = resp.data;
+          // console.log(this.contentDB);
+
         })
         .catch(error => {
           console.log(error)
@@ -17,8 +20,8 @@ let app = new Vue({
     },
   },
 
-  
+
   mounted(){
     this.getData();
   },
-});
+})

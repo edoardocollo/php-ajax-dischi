@@ -24,7 +24,8 @@ header .header_wrap img {
 
 #main_wrap {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-top: 100px;
 }
 #main_wrap .row {

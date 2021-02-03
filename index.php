@@ -22,7 +22,10 @@
       </header>
 
       <div id="main_wrap">
+
+
         <div class="row">
+
 
           <?php foreach ($db as $card) { ?>
             <div class="card">
@@ -34,16 +37,22 @@
             </div>
           <?php } ?>
         </div>
+
+
+
+        <div id="app" class="row">
+          <div class="card" v-for="card in contentDB">
+            <img :src="card.poster" alt="">
+            <h2>{{card.title}}</h2>
+            <h3>{{card.author}}</h3>
+            <h4>{{card.genre}}</h4>
+            <h4>{{card.year}}</h4>
+          </div>
+        </div>
+
+
+
       </div>
-
-
-
-
-      <div id="app">
-
-      </div>
-
-
 
 
 
